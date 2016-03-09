@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="shortcut icon" href="src/img/favicon.ico" type="image/x-icon"/>
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200italic,400,600,600italic,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="dist/typeit.min.css">
+    <link rel="stylesheet" type="text/css" href="src/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A jQuery plugin that types text for you.">
+    <meta name="keywords" content="jQuery,animated typing,JavaScript plugin,jQuery plugin">
+    <meta name="author" content="Alex MacArthur">
+    <title>TypeIt | A jQuery Typing Plugin</title>
+  </head>
+
+  <body>
+    <a name="top"></a>
+
+    <header>
+        <h1 class="main-header">TypeIt</h1>
+        <hr>
+        <span id="typeit-box"></span>
+        <a href="https://github.com/alexmacarthur/typeit" class="github-link">
+          <span class="github-text">See the Project on <strong>GitHub.</strong></span>
+        </a>
+    </header>
+
+    <ul class="features-list">
+      <li>Lightweight</li>
+      <li>Multiple Ways to Initialize</li>
+      <li>Handles HTML Tags</li>
+      <li>Tons of Settings to Customize As Needed</li>
+    </ul>
+
+    <div class="container">
+
+      <section>
+
+        <form id="TIInput">
+
+          <h2 class="ti-header">Try it!</h2>
+          <span class="info">Tweak the settings (optional), enter at least one string, and watch it go!</span>
+
+          <div class="options-holder">
+
+            <div class="ti-option-box">
+              <label>Type Speed</labeL>
+              <input class="ti-option" type="number" id="iTypeSpeed" placeholder="typeSpeed">
+            </div>
+
+            <div class="ti-option-box">
+              <label>Life-Like</labeL>
+              <select class="ti-option" id="iLifeLike">
+                <option value="true" selected>True</option>
+                <option value="false">False</option>
+              </select>
+            </div>
+
+            <div class="ti-option-box">
+              <label>Show Cursor</labeL>
+              <select class="ti-option" id="iShowCursor">
+                <option value="true" selected>True</option>
+                <option value="false">False</option>
+              </select>
+            </div>
+
+            <div class="ti-option-box">
+              <label>Break Lines</labeL>
+              <select class="ti-option" id="iBreakLines">
+                <option value="true" selected>True</option>
+                <option value="false">False</option>
+              </select>
+            </div>
+
+            <div class="ti-option-box">
+              <label>Break Delay</labeL>
+              <input class="ti-option" type="number" id="iBreakDelay" placeholder="breakDelay">
+            </div>
+
+            <div class="ti-option-box">
+              <label>Start Delay</labeL>
+              <input class="ti-option" type="number" id="iStartDelay" placeholder="breakStart">
+            </div>
+
+            <div class="ti-option-box">
+              <label>Loop</labeL>
+              <select class="ti-option" id="iLoop">
+                <option value="true">True</option>
+                <option value="false" selected>False</option>
+              </select>
+            </div>
+
+            <div class="ti-option-box">
+              <label>Loop Delay</labeL>
+              <input class="ti-option" type="number" id="iLoopDelay" placeholder="loopDelay">
+            </div>
+
+            <a href="#options" class="settings-link">Wait, what do these settings actually do?</a>
+
+            <textarea rows="3" id="stringTI" placeholder="Enter one or multiple strings per line. You can use HTML tags too!"></textarea>
+
+          </div>
+
+          <input type="submit" id="TISubmit" value="Type it!">
+
+        </form>
+
+        <div id="TIOutputBox">
+
+          <div id="TIOutput">
+
+            <span id="tempText">output box</span>
+
+          </div>
+
+        </div>
+
+        <a id="scrollTo"></a>
+
+      </section>
+
+      <hr class="section-divider">
+
+      <section class="setup-section">
+
+        <h2>Three Ways to Get Started</h2>
+
+        <div class="setup-blocks">
+
+          <div class="setup-block">
+            <h3>pass in settings object</h3>
+            <p class="description">The easiest way to start it up, and the default. Pass in at least one string and other optional settings, and you're all set.</p>
+            <div class="code-block setup-code-block">
+
+              &lt;p id=&quot;example1&quot;&gt;&lt;/p&gt;
+
+              <br>
+              <br>
+
+              $('#example1').typeIt({<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;whatToType: "You've just initialized this bad boy."<br>
+              });
+
+            </div>
+          </div>
+
+          <div class="setup-block">
+            <h3>data-typeit-* attributes</h3>
+            <p class="description">Every TypeIt setting can be defined by data-typeit-* attributes, so you can keep the code of multiple instances easier to manage.</p>
+            <div class="code-block setup-code-block">
+
+              &lt;p id=&quot;example2&quot; data-typeit-whattotype=&quot;This was defined with a data-typeit-* attribute.&quot;&gt;&lt;/p&gt;
+
+              <br>
+              <br>
+
+              $('#example2').typeIt();
+
+            </div>
+          </div>
+
+          <div class="setup-block">
+            <h3>directly in HTML element</h3>
+            <p class="description">You an define your string by dropping it directly in the HTML element. It serves as a fallback if the user doesn't have JavaScript enabled.</p>
+            <div class="code-block setup-code-block">
+
+              &lt;p id=&quot;example3&quot;&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This is the string that will be typed!<br>&lt;/p&gt;
+
+              <br>
+              <br>
+
+              $('#example3').typeIt();
+
+            </div>
+          </div>
+
+        </div>
+
+      </section>
+
+      <hr class="section-divider">
+
+      <section>
+        <h2>Type More Than Just Single Strings</h2>
+
+        <div class="left">
+          <h3>Type multiple strings that stack on each other:</h3>
+
+          <button id="btn-example4">Rerun</button>
+        </div>
+
+        <div class="right">
+
+          <div class="code-block code-input">
+            <small>Code</small>
+
+            &lt;p id=&quot;example4&quot;&gt;&lt;/p&gt;
+
+            <br>
+            <br>
+
+             $('#example4').typeIt({<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;whatToType: ["This is a string!", "And here's another one."],<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;typeSpeed: 100<br>
+            });
+
+          </div>
+
+          <div class="code-block code-output">
+            <small>Output</small>
+            <p id="example4"></p>
+          </div>
+
+        </div>
+
+      </section>
+
+      <hr class="section-divider">
+
+      <section>
+
+        <div class="left">
+
+          <h3>Or type multiple strings that delete &amp; replace each other:</h3>
+
+          <button id="btn-example5">Rerun</button>
+
+        </div>
+
+        <div class="right">
+
+          <div class="code-block code-input">
+            <small>Code</small>
+
+            &lt;p id=&quot;example5&quot;&gt;&lt;/p&gt;
+
+            <br>
+            <br>
+
+             $('#example5').typeIt({<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;whatToType: ["This is a great string.", "But here is a better one."],<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;typeSpeed: 100,<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;breakLines: false<br>
+            });
+
+          </div>
+
+          <div class="code-block code-output">
+            <small>Output</small>
+            <p id="example5"></p>
+          </div>
+
+        </div>
+
+      </section>
+
+      <hr class="section-divider">
+
+      <section>
+
+        <div class="left">
+
+          <h3>Or type strings wrapped in HTML tags:</h3>
+
+          <button id="btn-example6">Rerun</button>
+
+        </div>
+
+        <div class="right">
+
+          <div class="code-block code-input">
+            <small>Code</small>
+
+            &lt;p id=&quot;example6&quot;&gt;&lt;/p&gt;
+
+            <br>
+            <br>
+
+             $('#example6').typeIt({<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;whatToType: ["Here's text &lt;span class='just-a-class'&gt;wrapped in HTML&lt;/span&gt;."],<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;typeSpeed: 100
+            });
+
+          </div>
+
+          <div class="code-block code-output">
+            <small>Output</small>
+            <p id="example6"></p>
+          </div>
+
+        </div>
+
+      </section>
+
+      <hr class="section-divider">
+
+      <section>
+        <a name="options"></a>
+
+          <h3>There are plenty of settings to tweak how you desire:</h3>
+          <br>
+
+          <table>
+
+            <tr>
+              <th>Option</th>
+              <th>Description</th>
+              <th>Default</th>
+            </tr>
+
+            <tr>
+              <td>whatToType</td>
+              <td>The string or strings you'd like to type.</td>
+              <td>"You probably want to use your own string."</td>
+            </tr>
+
+            <tr>
+              <td>typeSpeed</td>
+              <td>The speed (milliseconds) at which you want to type.</td>
+              <td>100</td>
+            </tr>
+
+            <tr>
+              <td>lifeLike</td>
+              <td>Choose whether the plugin types at a constant pace or irregular, lifelike pace.</td>
+              <td>true</td>
+            </tr>
+
+            <tr>
+              <td>showCursor</td>
+              <td>Choose whether you want the blinking cursor to appear when typing.</td>
+              <td>true</td>
+            </tr>
+
+            <tr>
+              <td>breakLines</td>
+              <td>Choose whether you want multiple strings to be printed on top of each other (breakLines = true), or if you want each string to be deleted and replaced by the next one (breakLines = false).</td>
+              <td>true</td>
+            </tr>
+
+            <tr>
+              <td>breakDelay</td>
+              <td>The amount of time between typing multiple strings.</td>
+              <td>750</td>
+            </tr>
+
+            <tr>
+              <td>startDelay</td>
+              <td>The amount of time before the plugin begins typing after initializing.</td>
+              <td>250</td>
+            </tr>
+
+            <tr>
+              <td>loop</td>
+              <td>Have your string or strings continuously loop after completing.</td>
+              <td>false</td>
+            </tr>
+
+            <tr>
+              <td>loopDelay</td>
+              <td>The amount of time between looping over a string or set of strings again.</td>
+              <td>750</td>
+            </tr>
+
+          </table>
+
+      </section>
+
+      <br>
+      <a href="#top">Back to Top</a>
+
+      <hr class="section-divider">
+
+      <section>
+        <h3 class="like-it">Like it? Hate it with a burning, insatiable passion? Let me know!</h3>
+        <i class="fa fa-chevron-down"></i>
+      </section>
+
+    </div>
+
+    <footer>
+
+      <ul class="connect-list">
+        <li class="connect-item"><a href="http://www.github.com/alexmacarthur"><i class="fa fa-github"></i></a></li>
+        <li class="connect-item"><a href="http://www.twitter.com/amacarthur"><i class="fa fa-twitter"></i></a></li>
+        <li class="connect-item"><a href="https://www.linkedin.com/in/alexmacarthur"><i class="fa fa-linkedin"></i></a></li>
+        <li class="connect-item"><a href="http://macarthur.me"><i class="fa fa-globe"></i></a></li>
+      </ul>
+
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="dist/typeit.min.js"></script>
+    <script src="src/scripts.min.js"></script>
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-69226290-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+
+  </body>
+</html>

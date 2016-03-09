@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="../dist/typeit.min.css">
+    <title>typeIt | A jQuery Typing Plugin</title>
+  </head>
+
+  <body>
+
+    <section>
+
+       <span id="typeItBox">
+        Testing an in-element string!
+      </span>
+
+    </section>
+
+    <script src="../src/jquery-2.1.4.min.js"></script>
+    <script src="../dist/typeit.min.js"></script>
+    <script>
+      $('#typeItBox').typeIt({
+        loop: true
+      });
+    </script>
+
+  </body>
+</html>

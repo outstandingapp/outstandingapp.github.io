@@ -1,0 +1,43 @@
+header {
+  margin: 2rem 0 3rem;
+  padding: 2rem;
+  background: $light-gray;
+  border-bottom: 2px solid $light-gray;
+  border-top: 2px solid $light-gray;
+}
+
+#typeit-box {
+  line-height: 6rem;
+  font-size: 5rem;
+  margin: 2rem 0 3rem;
+  font-weight: 200;
+  line-height: 6rem;
+}
+
+.github-link {
+  color: black;
+
+  &:hover {
+    color: $green;
+  }
+}
+
+.github-text {
+  font-size: 1.6rem;
+  display: inline-block;
+}
+
+.main-header {
+  margin: 0;
+  font-weight: 600;
+}
+
+.emphasized {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+.emphasized-duh {
+  font-weight: 200;
+  font-style: italic;
+}
