@@ -30,6 +30,22 @@ body {
     font-weight: 700;
 }
 
+/* logo */
+
+@media (min-width: 1px) 
+{ 
+    .o_logo{
+		width: 80%;
+    }    
+}
+
+@media (min-width: 750px) 
+{ 
+    .o_logo{
+		width: 40%;
+    }    
+}
+
 /* Custom Button Styles */
 
 .btn-dark {
@@ -196,20 +212,22 @@ hr.small {
 /* Portfolio */
 
 .portfolio {
-    padding: 50px 0;
+    padding: 50px 0 0 0;
 }
 
 .portfolio-item {
-    margin-bottom: 30px;
+    margin-bottom: -80px;
 }
 
 .img-portfolio {
     margin: 0 auto;
 }
 
+/*
 .img-portfolio:hover {
     opacity: 0.8;
 }
+*/
 
 /* Call to Action */
 
@@ -219,6 +237,91 @@ hr.small {
 
 .call-to-action .btn {
     margin: 10px;
+}
+
+
+/* Education */
+
+/* carousel */
+#quote-carousel 
+{
+  padding: 0 10px 30px 10px;
+  margin-top: 30px;
+}
+
+/* Control buttons  */
+#quote-carousel .carousel-control
+{
+  background: none;
+  color: #222;
+  font-size: 2.3em;
+  text-shadow: none;
+  margin-top: 30px;
+}
+/* Previous button  */
+#quote-carousel .carousel-control.left 
+{
+  left: -12px;
+}
+/* Next button  */
+#quote-carousel .carousel-control.right 
+{
+  right: -12px !important;
+}
+/* Changes the position of the indicators */
+#quote-carousel .carousel-indicators 
+{
+  right: 50%;
+  top: auto;
+  bottom: 0px;
+  margin-right: -19px;
+}
+/* Changes the color of the indicators */
+#quote-carousel .carousel-indicators li 
+{
+  background: #c0c0c0;
+}
+#quote-carousel .carousel-indicators .active 
+{
+  background: #333333;
+}
+#quote-carousel img
+{
+  width: 250px;
+  height: 100px
+}
+/* End carousel */
+
+.item blockquote {
+    border-left: none; 
+    margin: 0;
+}
+
+.item blockquote img {
+    margin-bottom: 10px;
+}
+
+.item blockquote p:before {
+    content: "\f10d";
+    font-family: 'Fontawesome';
+    float: left;
+    margin-right: 10px;
+}
+
+
+
+/**
+  MEDIA QUERIES
+*/
+
+/* Educational Carousel */
+@media (min-width: 768px) { 
+    #quote-carousel 
+    {
+      margin: auto;
+      text-align: center;
+    }
+    
 }
 
 /* Map */
@@ -238,6 +341,12 @@ hr.small {
 footer {
     padding: 100px 0;
 }
+
+
+#video {
+	width: 100% !important;
+}
+
 
 /* Type It */
 .typeit-box_title {

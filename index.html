@@ -41,19 +41,16 @@
         <ul class="sidebar-nav">
             <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
             <li class="sidebar-brand">
-                <a href="#top"  onclick = $("#menu-close").click(); >outstanding</a>
+                <a href="#top"  onclick = $("#menu-close").click(); >outstanding</a> 
             </li>
             <li>
                 <a href="#top" onclick = $("#menu-close").click(); >Home</a>
             </li>
             <li>
-                <a href="#about" onclick = $("#menu-close").click(); >About</a>
+                <a href="#portfolio" onclick = $("#menu-close").click(); >Video</a>
             </li>
             <li>
-                <a href="#services" onclick = $("#menu-close").click(); >Services</a>
-            </li>
-            <li>
-                <a href="#portfolio" onclick = $("#menu-close").click(); >Portfolio</a>
+                <a href="#about" onclick = $("#menu-close").click(); >How It Works</a>
             </li>
             <li>
                 <a href="#contact" onclick = $("#menu-close").click(); >Contact</a>
@@ -64,7 +61,7 @@
     <!-- Header -->
     <header id="top" class="header">
         <div class="text-vertical-center">
-            <h1>outstanding</h1>
+            <img class="img-portfolio img-responsive o_logo" src="img/logo_g.png">
 <!--             <h3>here to help you sit less</h3> -->
             <span class="typeit-box_title"></span>
                         <br><br><br><br><br><br>
@@ -82,34 +79,138 @@
         </div>
     </header>
 
-<!-- About -->
-    <section id="about" class="about">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h1>What's so <b>bad</b> about sitting?</h1>
-                </div>
-            </div>
-            <!-- /.row -->
-        </div>
-        <!-- /.container -->
-    </section>
-
-
-
-
     <!-- About -->
     <section id="portfolio" class="portfolio">
         <div class="container">
 			<div class="row">
 
-				<span class="typeit-box"></span>
+				<iframe id="video" width="560" height="500" src="https://www.youtube.com/embed/1XDt7xBOX3w" frameborder="0" allowfullscreen></iframe>
+				
+				<br>
 
     		</div>
             <!-- /.row -->
         </div>
         <!-- /.container -->
     </section>
+
+
+        <!-- Education -->
+    <section id="education" class="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h1><b>Why's </b>sitting so bad?</h1>
+                </div>
+            </div>
+            <!-- /.row -->
+        </div>
+        
+        <!-- /.container -->
+    </section>
+
+<!-- Head tags to include FontAwesome -->
+<head>
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+</head>
+
+<div class="container">
+  <div class='row'>
+    <div class='col-md-offset-2'>
+      <div class="carousel slide" data-ride="carousel" id="quote-carousel">
+        
+        <!-- Carousel Slides / Quotes -->
+        <div class="carousel-inner">
+        
+          <!-- Quote 1 -->
+          <div class="item active">
+
+              <div class="row">
+                <div class="col-md-9">
+                  <h2>Tip: Drink lots of water for frequent restroom trips</h2>
+                </div>
+              </div>
+
+          </div>
+          <!-- Quote 2 -->
+          <div class="item">
+
+              <div class="row">
+
+                <div class="col-sm-9">
+                  <h2>After 90 minutes of sitting, your metabolism slows down dramatically</h2>
+                </div>
+              </div>
+
+          </div>
+          <!-- Quote 3 -->
+          <div class="item">
+
+              <div class="row">
+                <div class="col-sm-9">
+                  <h2>When you stand, you burn 50 more calories than when sitting</h2>
+                </div>
+              </div>
+
+          </div>
+
+        
+                  <!-- Quote 4 -->
+          <div class="item">
+
+              <div class="row">
+                <div class="col-sm-9">
+                  <h2>Tip: Take phone calls stand up - this boosts confidence and voice quality</h2>
+                </div>
+              </div>
+
+          </div>
+
+        
+                          <!-- Quote 5 -->
+          <div class="item">
+
+              <div class="row">
+                <div class="col-sm-9">
+                  <h2>Tip: Visit your colleagues instead of sending them an email</h2>
+                </div>
+              </div>
+
+          </div>
+
+        
+                                  <!-- Quote 6 -->
+          <div class="item">
+
+              <div class="row">
+                <div class="col-sm-9">
+                  <h2>Just standing a little more each day tones muscles and increases blood flow</h2>
+                </div>
+              </div>
+
+          </div>
+
+        
+                                          <!-- Quote 7 -->
+          <div class="item">
+
+              <div class="row">
+                <div class="col-sm-9">
+                  <h2>Research shows that exercise and diet cannot negate the effects of extended periods of sitting</h2>
+                </div>
+              </div>
+
+          </div>
+
+        
+        
+        <!-- Carousel Buttons Next/Prev -->
+      </div>                          
+    </div>
+  </div>
+</div>
+
+
 
 
     <!-- About -->
@@ -124,7 +225,7 @@
         </div>
         <!-- /.container -->
     </section>
-
+    
     <div class="row">
         <div class="portfolio-item">
             <a href="#">
@@ -132,14 +233,14 @@
             </a>
         </div>
     </div>
-
-
-    <!-- About -->
+    
+        <!-- About -->
     <section id="about" class="about">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h3>Our algorithm analyzes your computer input and notifies you to take a break after extended periods of sitting
+                    <h3>OutStanding analyzes your computer input and encourages you to take necessary breaks from sitting
+	                 
 					</h3>
                 </div>
             </div>
@@ -147,96 +248,11 @@
         </div>
         <!-- /.container -->
     </section>
-
+    
     
 
-
-    <!-- Services -->
-    <!-- The circle icons use Font Awesome's stacked icon classes. For more information, visit http://fontawesome.io/examples/ -->
-    <section id="services" class="services bg-primary">
-        <div class="container">
-            <div class="row text-center">
-                <div class="col-lg-10 col-lg-offset-1">
-                    <h2>The Team</h2>
-                    <hr class="small">
-                    <div class="row">
-                        <div class="col-md-3 col-sm-6">
-                            <div class="service-item">
-                                <span class="fa-stack fa-4x">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-cloud fa-stack-1x text-primary"></i>
-                            </span>
-                                <h4>
-                                    <strong>Brian Kim</strong>
-                                </h4>
-                                <p>DEVELOPER<br>basketball</p>
-                                <a href="#" class="btn btn-light">LinkedIn</a>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-6">
-                            <div class="service-item">
-                                <span class="fa-stack fa-4x">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-compass fa-stack-1x text-primary"></i>
-                            </span>
-                                <h4>
-                                    <strong>Cathleen Joya</strong>
-                                </h4>
-                                <p>PM<br>basketball</p>
-                                <a href="#" class="btn btn-light">LinkedIn</a>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-6">
-                            <div class="service-item">
-                                <span class="fa-stack fa-4x">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-flask fa-stack-1x text-primary"></i>
-                            </span>
-                                <h4>
-                                    <strong>Matt Rizzo</strong>
-                                </h4>
-                                <p>DEVELOPER<br>soccer</p>
-                                <a href="#" class="btn btn-light">LinkedIn</a>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-6">
-                            <div class="service-item">
-                                <span class="fa-stack fa-4x">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-shield fa-stack-1x text-primary"></i>
-                            </span>
-                                <h4>
-                                    <strong>Yahya Wahbeh</strong>
-                                </h4>
-                                <p>DESIGNER<br>travel</p>
-                                <a href="#" class="btn btn-light">LinkedIn</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- /.row (nested) -->
-                </div>
-                <!-- /.col-lg-10 -->
-            </div>
-            <!-- /.row -->
-        </div>
-        <!-- /.container -->
-    </section>
-
-
-
-    <!-- Map -->
-    <section id="contact" class="map">
-	    
-	    
-        <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2895.5002687408255!2d-80.54156008450818!3d43.47102917912796!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882bf40159016589%3A0xd3703cd1b9f2ea6a!2sCarl+A.+Pollock+Hall%2C+200+University+Ave+W%2C+Waterloo%2C+ON+N2L+3G1!5e0!3m2!1sen!2sca!4v1453929452639;output=embed"></iframe>        
-        <br />
-        <small>
-            <a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2895.5002687408255!2d-80.54156008450818!3d43.47102917912796!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882bf40159016589%3A0xd3703cd1b9f2ea6a!2sCarl+A.+Pollock+Hall%2C+200+University+Ave+W%2C+Waterloo%2C+ON+N2L+3G1!5e0!3m2!1sen!2sca!4v1453929452639"></a>
-        </small>
-        </iframe>
-    </section>
-
     <!-- Footer -->
+    <section id="contact" class="map">
     <footer>
 	    
 	    <div class="container">
@@ -248,15 +264,13 @@
         </div>
 	                <br>
                     <br>
-                    <br>
 
         <div class="container">
             <div class="row">
                 <div class="col-lg-10 col-lg-offset-1 text-center">
-                    <h4><strong>outstanding</strong>
                     </h4>
                         <ul class="list-unstyled">
-                        <li><i class="fa fa-envelope-o fa-fw"></i>  <a href="mailto:name@example.com">name@example.com</a>
+                        <li><i class="fa fa-envelope-o fa-fw"></i>  <a href="mailto:outstandingapp@gmail.com">outstandingapp@gmail.com</a>
                         </li>
                     </ul>
                     <hr class="small">
@@ -265,6 +279,7 @@
             </div>
         </div>
     </footer>
+    </section>
 
 
 	<!-- JQuery -->
