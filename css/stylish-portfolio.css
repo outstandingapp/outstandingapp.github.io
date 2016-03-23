@@ -243,6 +243,7 @@ hr.small {
 /* Education */
 
 /* carousel */
+
 #quote-carousel 
 {
   padding: 0 10px 30px 10px;
@@ -315,9 +316,10 @@ hr.small {
 */
 
 /* Educational Carousel */
-@media (min-width: 768px) { 
+@media (min-width: 100px) { 
     #quote-carousel 
     {
+      width: 95% !important;
       margin: auto;
       text-align: center;
     }
